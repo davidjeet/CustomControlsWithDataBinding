@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<prism:PrismApplication xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Unity;assembly=Prism.Unity.Forms"
+             x:Class="BlankApp1.App">
+	<Application.Resources>
+
+        <ResourceDictionary>
+
+            <!--Global Constants-->
+            <Color x:Key="Background">#ffffff</Color>
+            <Color x:Key="ForegroundHeaderText">#ffffff</Color>
+            <Color x:Key="Foreground">#eb4d3d</Color>
+            <!-- red-ish -->
+            <Color x:Key="NavigationText">#007AFF</Color>
+            <!-- apple blue -->
+            <Color x:Key="HeaderBackground">#ffffff</Color>
+            <Color x:Key="DefaultText">#000000</Color>
+            <Color x:Key="SubHeaderForeground">#000000</Color>
+            <Color x:Key="SubHeaderForeground2">#303030</Color>
+            <Color x:Key="SubHeaderBackground">#c5c5c5</Color>
+
+            <!--Global Styles Pages-->
+            <Style TargetType="NavigationPage">
+                <!--                <Setter Property="BarBackgroundColor" Value="{StaticResource Background}" />-->
+                <Setter Property="BarTextColor" Value="{StaticResource NavigationText}" />
+            </Style>
+            <Style TargetType="ContentPage">
+                <Setter Property="BackgroundColor" Value="{StaticResource Background}" />
+            </Style>
+
+
+            <!--Global Styles Controls w/ Specific Class-->
+
+            <!--Header Class-->
+            <Style TargetType="Label" Class="Header">
+                <Setter Property="FontSize" Value="32" />
+                <Setter Property="FontAttributes"  Value="Bold" />
+                <Setter Property="TextColor"  Value="{StaticResource ForegroundHeaderText}" />
+                <Setter Property="BackgroundColor"  Value="{StaticResource HeaderBackground}" />
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+                <Setter Property="Margin" Value="0,0,0,15" />
+            </Style>
+
+            <!--LargeEntryBox Class-->
+            <Style TargetType="Entry" Class="LargeEntryBox">
+                <Setter Property="FontSize" Value="26" />
+                <Setter Property="TextColor" Value="{StaticResource DefaultText}" />
+                <Setter Property="Margin" Value="20,20,20,20" />
+            </Style>
+
+            <!--SearchPicker Class-->
+            <Style TargetType="Picker" Class="SearchPicker">
+                <Setter Property="FontSize" Value="22" />
+                <Setter Property="WidthRequest" Value="400" />
+                <Setter Property="TextColor" Value="{StaticResource DefaultText}" />
+                <Setter Property="Margin" Value="0,10,0,10" />
+            </Style>
+
+            <!--SubHeader Class-->
+            <Style TargetType="StackLayout" Class="SubHeader">
+                <Setter Property="BackgroundColor"  Value="{StaticResource SubHeaderBackground}" />
+                <Setter Property="Margin" Value="10,10,10,10" />
+            </Style>
+            <!--Global Styles Controls-->
+            <Style TargetType="Label" Class="SubHeaderLabel1">
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor"  Value="{StaticResource SubHeaderForeground}" />
+                <Setter Property="BackgroundColor"  Value="{StaticResource SubHeaderBackground}" />
+                <Setter Property="Margin" Value="0" />
+            </Style>
+            <Style TargetType="Label" Class="SubHeaderLabel2">
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="TextColor"  Value="{StaticResource SubHeaderForeground2}" />
+                <Setter Property="BackgroundColor"  Value="{StaticResource SubHeaderBackground}" />
+                <Setter Property="Margin" Value="0" />
+            </Style>
+
+
+            <!--Global Styles Controls-->
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="TextColor"  Value="{StaticResource Foreground}" />
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+                <Setter Property="Margin" Value="10,10,10,10" />
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="FontSize" Value="24" />
+                <Setter Property="TextColor" Value="{StaticResource NavigationText}" />
+                <Setter Property="Margin" Value="15,15,15,15" />
+            </Style>
+
+            <!-- Named Style Pages-->
+            <Style x:Key="PageStyle" TargetType="ContentPage">
+                <Setter Property="BackgroundColor" Value="SkyBlue" />
+            </Style>
+
+
+
+            <!-- Named Style Controls-->
+
+
+
+        </ResourceDictionary>
+
+    </Application.Resources>
+</prism:PrismApplication>

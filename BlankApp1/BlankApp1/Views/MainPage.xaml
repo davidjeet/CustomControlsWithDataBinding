@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"             
+             x:Class="BlankApp1.Views.MainPage"
+             xmlns:controls="clr-namespace:BlankApp1.Controls"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Name="MainPage1">
+
+
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <Label Text="Welcome to Xamarin Forms and Prism!" />
+
+        <controls:SubHeaderView x:Name="subHeaderView1"
+                            SubHeaderContent="Sample Content blah blahblahblahblah blah blah"
+                            SubHeaderTitle="Testing 123"/>
+        
+        <controls:SubHeaderView x:Name="subHeaderView2"
+            SubHeaderContent="{Binding Path=BindingContext.MatchesDisplay, Source={x:Reference MainPage1}}"
+            SubHeaderTitle="Testing 456"/>
+    </StackLayout>
+
+</ContentPage>
